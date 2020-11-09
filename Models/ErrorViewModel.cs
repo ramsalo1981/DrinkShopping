@@ -1,5 +1,3 @@
-using System;
-
 namespace DrinkAndGo.Models
 {
     public class ErrorViewModel

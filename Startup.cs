@@ -1,21 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DrinkAndGo.Data;
 using DrinkAndGo.Data.Interfaces;
-using DrinkAndGo.Data.Mocks;
 using DrinkAndGo.Data.Repositories;
 using DrinkAndGo.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace DrinkAndGo
 {
@@ -51,9 +46,9 @@ namespace DrinkAndGo
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
-            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -83,11 +78,11 @@ namespace DrinkAndGo
                 //    defaults: new { Controller = "Drink", action = "List" });
             });
 
-            DbInitializer.Seed(serviceProvider);
+            DbInitializer.Seed(app);
 
 
         }
 
-        
+
     }
 }

@@ -3,14 +3,13 @@ using DrinkAndGo.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace DrinkAndGo.Data.Mocks
 {
     public class MockDrinkRepository : IDrinkRepository
     {
         private readonly ICategoryRepository _categoryRepository = new MockCategoryRepository();
-        public  IEnumerable<Drink> Drinks => new List<Drink>
+        public IEnumerable<Drink> Drinks => new List<Drink>
             {
                     new Drink {
                         Name = "Beer",

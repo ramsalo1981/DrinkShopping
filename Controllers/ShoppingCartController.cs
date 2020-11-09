@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DrinkAndGo.Data.Interfaces;
+﻿using DrinkAndGo.Data.Interfaces;
 using DrinkAndGo.Models;
 using DrinkAndGo.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace DrinkAndGo.Controllers
 {
@@ -19,7 +16,7 @@ namespace DrinkAndGo.Controllers
             _drinkRepository = drinkRepository;
             _shoppingCart = shoppingCart;
         }
-        
+
         public ViewResult Index()
         {
             var items = _shoppingCart.GetShoppingCartItems();

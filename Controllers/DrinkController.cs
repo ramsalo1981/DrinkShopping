@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DrinkAndGo.Data.Interfaces;
+﻿using DrinkAndGo.Data.Interfaces;
 using DrinkAndGo.Models;
 using DrinkAndGo.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DrinkAndGo.Controllers
 {
@@ -32,11 +31,17 @@ namespace DrinkAndGo.Controllers
             }
             else
             {
-                
+
+                //if (string.Equals("Alcoholic", _category, StringComparison.OrdinalIgnoreCase))
+                //    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Alcoholic")).GroupBy(p => p.Name).Select(p =>p.First());
+                //else
+                //    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Non-alcoholic")).GroupBy(p => p.Name).Select(p => p.First());
+
+                //currentCategory = _category;
                 if (string.Equals("Alcoholic", _category, StringComparison.OrdinalIgnoreCase))
-                    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Alcoholic")).GroupBy(p => p.Name).Select(p =>p.First());
+                    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Alcoholic")).OrderBy(p => p.Name);
                 else
-                    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Non-alcoholic")).GroupBy(p => p.Name).Select(p => p.First());
+                    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Non-alcoholic")).OrderBy(p => p.Name);
 
                 currentCategory = _category;
             }
@@ -47,7 +52,7 @@ namespace DrinkAndGo.Controllers
             };
 
             return View(drinkListViewModel);
-            
+
         }
     }
 }

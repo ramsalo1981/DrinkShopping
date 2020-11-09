@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\DrinkAndGo.csproj": {}
+    "C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\DrinkShopping\\DrinkAndGo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\DrinkAndGo.csproj": {
+    "C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\DrinkShopping\\DrinkAndGo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\DrinkAndGo.csproj",
+        "projectUniqueName": "C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\DrinkShopping\\DrinkAndGo.csproj",
         "projectName": "DrinkAndGo",
-        "projectPath": "C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\DrinkAndGo.csproj",
+        "projectPath": "C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\DrinkShopping\\DrinkAndGo.csproj",
         "packagesPath": "C:\\Users\\ramis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\obj\\",
+        "outputPath": "C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\DrinkShopping\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

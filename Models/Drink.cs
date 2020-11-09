@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DrinkAndGo.Models
 {
@@ -16,6 +13,7 @@ namespace DrinkAndGo.Models
         public string ImageThumbnailUrl { get; set; }
         public bool IsPreferredDrink { get; set; }
         public bool InStock { get; set; }
+        [ForeignKey("Category")]
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
     }

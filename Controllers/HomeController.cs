@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using DrinkAndGo.Models;
-using DrinkAndGo.Data.Interfaces;
+﻿using DrinkAndGo.Data.Interfaces;
 using DrinkAndGo.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DrinkAndGo.Controllers
 {
