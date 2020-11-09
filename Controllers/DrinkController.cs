@@ -39,9 +39,9 @@ namespace DrinkAndGo.Controllers
 
                 //currentCategory = _category;
                 if (string.Equals("Alcoholic", _category, StringComparison.OrdinalIgnoreCase))
-                    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Alcoholic")).OrderBy(p => p.Name);
+                    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Alcoholic")).OrderBy(p => p.Name).Distinct();
                 else
-                    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Non-alcoholic")).OrderBy(p => p.Name);
+                    drinks = _drinkRepository.Drinks.Where(p => p.Category.CategoryName.Equals("Non-alcoholic")).OrderBy(p => p.Name).Distinct();
 
                 currentCategory = _category;
             }

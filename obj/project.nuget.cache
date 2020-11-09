@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dcyzj1K1q/prly3PLyZV0pOdSNFZBt6+2G1oXQKufHK6YqwQBRPXjwYbdgeSHadb223KFquu4VwguFK22zHmnQ==",
+  "dgSpecHash": "i13B9/GobwxhByLkSQZC2BRZ2rvu3SrHuX4/spE+uAeTxrqgLFANNQ+bIsjHWWJ4gXq3e4wakw09S4QPxH1exQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\DrinkShopping\\DrinkAndGo.csproj",
+  "projectFilePath": "C:\\Users\\ramis\\Desktop\\DrinkApp\\DrinkShopping\\DrinkAndGo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ramis\\.nuget\\packages\\bootstrap\\4.5.3\\bootstrap.4.5.3.nupkg.sha512",
     "C:\\Users\\ramis\\.nuget\\packages\\jquery\\3.0.0\\jquery.3.0.0.nupkg.sha512",

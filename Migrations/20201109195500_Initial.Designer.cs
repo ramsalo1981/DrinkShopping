@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DrinkAndGo.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201108202847_Initial")]
+    [Migration("20201109195500_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,5 +1,7 @@
 ﻿using DrinkAndGo.Models;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,13 +36,17 @@ namespace DrinkAndGo.Data
 
                 AppDbContext context = scope.ServiceProvider.GetService<AppDbContext>();
 
-                if (context.Categories != null)
+                if (!context.Categories.Any())
                 {
-                    context.Categories.AddRange(Categories.Select(c => c.Value));
+                    context.Categories.AddRange(Categories.Select(c => c.Value).Distinct());
+                }
+                else
+                {
+                    
                 }
 
 
-                if (context.Drinks != null)
+                if (!context.Drinks.Any())
                 {
                     context.AddRange
                     (
@@ -294,9 +300,12 @@ namespace DrinkAndGo.Data
 
                     categories = new Dictionary<string, Category>();
 
-                    foreach (Category genre in genresList)
+                    foreach (Category genre in genresList.GroupBy(x => x.CategoryName).Select(x => x.First()))
                     {
-                        categories.Add(genre.CategoryName, genre);
+                        
+                            categories.Add(genre.CategoryName, genre);
+                        
+                        
                     }
                 }
 

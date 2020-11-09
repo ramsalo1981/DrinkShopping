@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="DrinkAndGo-Webapp" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ramis\\Desktop\\webbdesign\\DrinkAndGo\\DrinkShopping\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  <parameter name="IIS Web Application Name" description="" value="DrinkShopping" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ramis\\Desktop\\DrinkApp\\DrinkShopping\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>
